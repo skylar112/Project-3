@@ -1,6 +1,9 @@
 const db = require("../models");
 
+console.log("this is db" + db.Car)
+
 // Defining methods for the booksController
+
 module.exports = {
   findAll: function (req, res) {
     db.Car.find(req.query)
@@ -14,9 +17,15 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   create: function (req, res) {
+    console.log(req.body);
+
+
     db.Car.create(req.body)
       .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.status(422).json(err));
+      .catch((err) => {
+        console.log(err)
+        res.status(422).json(err)
+      });
   },
   update: function (req, res) {
     db.Car.findOneAndUpdate({ _id: req.params.id }, req.body)
@@ -30,3 +39,5 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
 };
+
+console.log("control");

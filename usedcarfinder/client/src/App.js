@@ -79,6 +79,9 @@ function App() {
           <Route exact path="/cars/:id">
             <Detail />
           </Route>
+          <Route exact path="/login/">
+           <Login />
+          </Route>
           <Route>
             <NoMatch />
           </Route>

@@ -13,4 +13,6 @@ router
   .put(carsController.update)
   .delete(carsController.remove);
 
+console.log("hello3")
+
 module.exports = router;

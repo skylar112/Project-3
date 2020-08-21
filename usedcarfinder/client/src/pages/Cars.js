@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import firebase from 'firebase';
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
@@ -7,20 +8,26 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-function Books() {
+function Cars() {
   // Setting our component's initial state
-  const [cars, setCars] = useState([]);
+  const [cars, setCar] = useState([]);
   const [formObject, setFormObject] = useState({});
-
+  const [userId, setUserId] = useState(null)
   // Load all books and store them with setBooks
   useEffect(() => {
-    loadCars();
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        setUserId(user.uid);
+        setCar([]);
+        loadCars(user.uid);
+      }
+    });    
   }, []);
 
   // Loads all books and sets them to books
-  function loadCars() {
-    API.getCars()
-      .then((res) => setCars(res.data))
+  function loadCars(uid) {
+    API.getCars({ userId: uid })
+      .then((res) => setCar(res.data))
       .catch((err) => console.log(err));
   }
 
@@ -37,18 +44,22 @@ function Books() {
     setFormObject({ ...formObject, [name]: value });
   }
 
+  console.log(formObject);
+
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
   function handleFormSubmit(event) {
     event.preventDefault();
     if (formObject.year && formObject.brand) {
-      API.saveBook({
+      API.saveCar({
+        userId,
         year: formObject.year,
+        model: formObject.model,
         brand: formObject.brand,
         description: formObject.description,
         imageURL: formObject.imageURL,
       })
-        .then((res) => loadCars())
+        .then((res) => loadCars(userId))
         .catch((err) => console.log(err));
     }
   }
@@ -61,7 +72,7 @@ function Books() {
             <h1>CAR?</h1>
           </Jumbotron>
           <form>
-            <img src={cars.imageURL} alt={cars.brand} />
+           
 
             <Input
               onChange={handleInputChange}
@@ -72,6 +83,17 @@ function Books() {
               onChange={handleInputChange}
               name="model"
               placeholder="Model (required)"
+            />
+            <Input
+              onChange={handleInputChange}
+              name="brand"
+              placeholder="Brand (required)"
+            />
+
+            <Input
+              onChange={handleInputChange}
+              name="imageURL"
+              placeholder="imageURL (required)"
             />
 
             <TextArea
@@ -96,6 +118,7 @@ function Books() {
               {cars.map((car) => (
                 <ListItem key={car._id}>
                   <Link to={"/car/" + car._id}>
+                    <img src={car.imageURL} alt={car.brand} />
                     <strong>
                       {car.year} {car.brand}
                     </strong>
@@ -113,4 +136,4 @@ function Books() {
   );
 }
 
-export default Books;
+export default Cars;

@@ -7,6 +7,7 @@ const carSchema = new Schema({
   model: { type: String, required: true },
   description: String,
   imageURL: String,
+  userId: String,
   datePosted: { type: Date, default: Date.now },
 });
 
