@@ -42,9 +42,9 @@
 //          <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
 //          <img
 //            alt="profile picture"
-//            src={firebase.auth().currentUser.photoURL}
+//            src={firebase.auth().currentUser.photoURL}>
 
-//          />
+      //
 //        </span>
 //        ) :  (
 //         <StyledFirebaseAuth

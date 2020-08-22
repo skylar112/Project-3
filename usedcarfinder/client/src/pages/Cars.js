@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import firebase from 'firebase';
+import firebase from "firebase";
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
@@ -12,16 +12,16 @@ function Cars() {
   // Setting our component's initial state
   const [cars, setCar] = useState([]);
   const [formObject, setFormObject] = useState({});
-  const [userId, setUserId] = useState(null)
+  const [userId, setUserId] = useState(null);
   // Load all books and store them with setBooks
   useEffect(() => {
-    firebase.auth().onAuthStateChanged(user => {
+    firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         setUserId(user.uid);
         setCar([]);
         loadCars(user.uid);
       }
-    });    
+    });
   }, []);
 
   // Loads all books and sets them to books
@@ -72,8 +72,6 @@ function Cars() {
             <h1>CAR?</h1>
           </Jumbotron>
           <form>
-           
-
             <Input
               onChange={handleInputChange}
               name="year"
@@ -118,11 +116,21 @@ function Cars() {
               {cars.map((car) => (
                 <ListItem key={car._id}>
                   <Link to={"/car/" + car._id}>
-                    <img src={car.imageURL} alt={car.brand} />
-                    <strong>
-                      {car.year} {car.brand}
-                    </strong>
+                    <img
+                      src={car.imageURL}
+                      className="img-fluid"
+                      alt={car.brand}
+                      width={500}
+                      height={500}
+                    />
                   </Link>
+                  <strong>
+                    <br />
+                    {car.year} <br />
+                    {car.brand} <br />
+                    {car.description} <br />
+                  </strong>
+
                   <DeleteBtn onClick={() => deleteCar(car._id)} />
                 </ListItem>
               ))}

@@ -1,17 +1,17 @@
 import React from "react";
-import firebase from 'firebase';
+import firebase from "firebase";
 
 function Nav() {
   const [isSignedIn, setSignInStatus] = React.useState(false);
 
   React.useEffect(() => {
-    firebase.auth().onAuthStateChanged(user => {
+    firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        setSignInStatus(true)
+        setSignInStatus(true);
       } else {
         setSignInStatus(false);
       }
-    })
+    });
   }, []);
 
   return (
@@ -19,8 +19,13 @@ function Nav() {
       <a className="navbar-brand" href="/">
         React Car List
       </a>
+
       {isSignedIn ? (
-        <a className="navbar-brand" href="#" onClick={() => firebase.auth().signOut()}>
+        <a
+          className="navbar-brand"
+          href="#"
+          onClick={() => firebase.auth().signOut()}
+        >
           Logout
         </a>
       ) : (
