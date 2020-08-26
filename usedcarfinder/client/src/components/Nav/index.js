@@ -1,6 +1,5 @@
 import React from "react";
 import firebase from "firebase";
-
 function Nav() {
   const [isSignedIn, setSignInStatus] = React.useState(false);
 
@@ -15,21 +14,21 @@ function Nav() {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+      <a className="navbar-brand text-light " href="/">
         React Car List
       </a>
 
       {isSignedIn ? (
         <a
-          className="navbar-brand"
+          className="navbar-brand text-light"
           href="#"
           onClick={() => firebase.auth().signOut()}
         >
           Logout
         </a>
       ) : (
-        <a className="navbar-brand" href="/login">
+        <a className="navbar-brand  text-light" href="/login">
           Login
         </a>
       )}

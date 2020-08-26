@@ -88,9 +88,6 @@ function Cars() {
     <Container fluid>
       <Row>
         <Col size="md-6">
-          <Jumbotron>
-            <h1>CAR?</h1>
-          </Jumbotron>
           <form>
             {formObject._id ? (
               <input type="hidden" value={formObject._id} name="id" />
@@ -136,14 +133,11 @@ function Cars() {
           </form>
         </Col>
         <Col size="md-6 sm-12">
-          <Jumbotron>
-            <h1>Cars On My List</h1>
-          </Jumbotron>
           {cars.length ? (
             <List>
               {cars.map((car) => (
                 <ListItem key={car._id}>
-                  <Link to={"/car/" + car._id}>
+                  <Link to={"/cars/" + cars._id}>
                     <img
                       src={car.imageURL}
                       className="img-fluid"
