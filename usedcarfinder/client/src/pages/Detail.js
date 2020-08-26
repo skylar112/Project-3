@@ -20,11 +20,11 @@ function Detail(props) {
     <Container fluid>
       <Row>
         <Col size="md-12">
-          <Jumbotron>
+          {/* <Jumbotron>
             <h1>
               {car.year} {car.brand}
             </h1>
-          </Jumbotron>
+          </Jumbotron> */}
         </Col>
       </Row>
       <Row>
