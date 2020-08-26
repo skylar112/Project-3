@@ -137,7 +137,7 @@ function Cars() {
             <List>
               {cars.map((car) => (
                 <ListItem key={car._id}>
-                  <Link to={"/car/" + car._id}>
+                  <Link to={"/cars/" + cars._id}>
                     <img
                       src={car.imageURL}
                       className="img-fluid"
