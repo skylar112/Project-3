@@ -4,6 +4,8 @@ import { Redirect } from "react-router-dom";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
+
+
 firebase.initializeApp({
   apiKey: "AIzaSyCxiw5em0-MAHTE7v6JJvuXuXpSO7RLOnM",
   authDomain: "usedcarfinder2.firebaseapp.com",

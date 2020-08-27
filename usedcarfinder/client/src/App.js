@@ -67,6 +67,7 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Jumbotron from "./components/Jumbotron";
+import Cards from "./components/cards";
 
 function App() {
   let [user,setUser]= useState(false)
@@ -89,6 +90,9 @@ function App() {
           <Route>
             <NoMatch />
           </Route>
+        </Switch>
+        <Switch>
+          <Cards/>
         </Switch>
       </div>
     </Router>
