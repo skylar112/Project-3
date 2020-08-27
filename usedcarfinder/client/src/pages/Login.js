@@ -27,8 +27,11 @@ class Login extends Component {
 
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged((user) => {
+      this.props.setUser(user)
       this.setState({ isSignedIn: !!user });
-      console.log("user", user);
+      console.log("log in", user);
+    
+
     });
   };
 
@@ -36,7 +39,7 @@ class Login extends Component {
     return (
       <div className="App">
         {this.state.isSignedIn ? (
-          <Redirect to="/" />
+          <Redirect to="/cars" />
         ) : (
           <StyledFirebaseAuth
             uiConfig={this.uiConfig}
