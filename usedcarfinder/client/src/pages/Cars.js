@@ -85,6 +85,7 @@ function Cars() {
   }
 
   return (
+    <div style={{ marginTop: '20px' }}>
     <Container fluid>
       <Row>
         <Col size="md-6">
@@ -137,7 +138,7 @@ function Cars() {
             <List>
               {cars.map((car) => (
                 <ListItem key={car._id}>
-                  <Link to={"/cars/" + cars._id}>
+                  <Link to={"/cars/" + car._id}>
                     <img
                       src={car.imageURL}
                       className="img-fluid"
@@ -165,6 +166,7 @@ function Cars() {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 }
 

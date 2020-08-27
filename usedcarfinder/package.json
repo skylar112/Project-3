@@ -12,7 +12,7 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-  "db:seed":"./node_modules/.bin/db_seed"
+    "db:seed": "./node_modules/.bin/db_seed"
   },
   "author": "",
   "license": "ISC",
