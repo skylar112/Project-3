@@ -8,24 +8,39 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import { Redirect } from "react-router-dom";
 
-function Cars() {
+function Cars(props) {
   // Setting our component's initial state
   const [cars, setCar] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [userId, setUserId] = useState(null);
-  // Load all books and store them with setBooks
+
+
+  // useEffect(() => {
+  //   firebase.auth().onAuthStateChanged((user) => {
+  //     if (user) {
+  //       setUserId(user.uid);
+  //       // props.setUser(user)
+  //       setCar([]);
+  //       loadCars(user.uid);
+  //     } else {
+  //       setCar([]);
+  //     }
+  //   });
+  // }, []);
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        setUserId(user.uid);
+   
+      if (props.user) {
+        setUserId(props.user.uid);
+        // props.setUser(user)
         setCar([]);
-        loadCars(user.uid);
+        loadCars(props.user.uid);
       } else {
         setCar([]);
       }
-    });
+    
   }, []);
 
   // Loads all books and sets them to books
@@ -86,7 +101,12 @@ function Cars() {
 
   return (
     <Container fluid>
-      <Row>
+
+
+        {(!props.user)?(<Redirect to="/"/>)
+        : 
+        
+      (<Row>
         <Col size="md-6">
           <form>
             {formObject._id ? (
@@ -163,7 +183,7 @@ function Cars() {
             <h3>No Results to Display</h3>
           )}
         </Col>
-      </Row>
+      </Row>)}
     </Container>
   );
 }
