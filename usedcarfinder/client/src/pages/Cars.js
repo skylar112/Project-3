@@ -100,6 +100,7 @@ function Cars(props) {
   }
 
   return (
+    <div style={{ marginTop: '20px' }}>
     <Container fluid>
 
 
@@ -157,7 +158,7 @@ function Cars(props) {
             <List>
               {cars.map((car) => (
                 <ListItem key={car._id}>
-                  <Link to={"/cars/" + cars._id}>
+                  <Link to={"/cars/" + car._id}>
                     <img
                       src={car.imageURL}
                       className="img-fluid"
@@ -185,6 +186,7 @@ function Cars(props) {
         </Col>
       </Row>)}
     </Container>
+    </div>
   );
 }
 

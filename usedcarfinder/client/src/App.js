@@ -67,7 +67,11 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Jumbotron from "./components/Jumbotron";
+kyle-branch1
+import './App.css';
+
 import Cards from "./components/cards";
+master
 
 function App() {
   let [user,setUser]= useState(false)
