@@ -16,7 +16,6 @@ function Cars(props) {
   const [formObject, setFormObject] = useState({});
   const [userId, setUserId] = useState(null);
 
-
   // useEffect(() => {
   //   firebase.auth().onAuthStateChanged((user) => {
   //     if (user) {
@@ -31,16 +30,14 @@ function Cars(props) {
   // }, []);
 
   useEffect(() => {
-   
-      if (props.user) {
-        setUserId(props.user.uid);
-        // props.setUser(user)
-        setCar([]);
-        loadCars(props.user.uid);
-      } else {
-        setCar([]);
-      }
-    
+    if (props.user) {
+      setUserId(props.user.uid);
+      // props.setUser(user)
+      setCar([]);
+      loadCars(props.user.uid);
+    } else {
+      setCar([]);
+    }
   }, []);
 
   // Loads all books and sets them to books
@@ -100,92 +97,91 @@ function Cars(props) {
   }
 
   return (
-    <div style={{ marginTop: '20px' }}>
-    <Container fluid>
+    <div style={{ marginTop: "20px" }}>
+      <Container fluid>
+        {!props.user ? (
+          <Redirect to="/" />
+        ) : (
+          <Row>
+            <Col size="md-6">
+              <form>
+                {formObject._id ? (
+                  <input type="hidden" value={formObject._id} name="id" />
+                ) : null}
+                <Input
+                  onChange={handleInputChange}
+                  name="year"
+                  placeholder="Year (required)"
+                  value={formObject.year}
+                />
+                <Input
+                  onChange={handleInputChange}
+                  name="model"
+                  placeholder="Model (required)"
+                  value={formObject.model}
+                />
+                <Input
+                  onChange={handleInputChange}
+                  name="brand"
+                  placeholder="Brand (required)"
+                  value={formObject.brand}
+                />
 
+                <Input
+                  onChange={handleInputChange}
+                  name="imageURL"
+                  placeholder="imageURL (required)"
+                  value={formObject.imageURL}
+                />
 
-        {(!props.user)?(<Redirect to="/"/>)
-        : 
-        
-      (<Row>
-        <Col size="md-6">
-          <form>
-            {formObject._id ? (
-              <input type="hidden" value={formObject._id} name="id" />
-            ) : null}
-            <Input
-              onChange={handleInputChange}
-              name="year"
-              placeholder="Year (required)"
-              value={formObject.year}
-            />
-            <Input
-              onChange={handleInputChange}
-              name="model"
-              placeholder="Model (required)"
-              value={formObject.model}
-            />
-            <Input
-              onChange={handleInputChange}
-              name="brand"
-              placeholder="Brand (required)"
-              value={formObject.brand}
-            />
+                <Input
+                  onChange={handleInputChange}
+                  name="description"
+                  placeholder="Price,Conditon,Comments (Optional)"
+                  value={formObject.description}
+                />
 
-            <Input
-              onChange={handleInputChange}
-              name="imageURL"
-              placeholder="imageURL (required)"
-              value={formObject.imageURL}
-            />
+                <FormBtn
+                  disabled={!(formObject.year && formObject.model)}
+                  onClick={handleFormSubmit}
+                  className=""
+                >
+                  Submit Car
+                </FormBtn>
+              </form>
+            </Col>
+            <Col size="md-6 sm-12">
+              {cars.length ? (
+                <List>
+                  {cars.map((car) => (
+                    <ListItem key={car._id}>
+                      <Link to={"/cars/" + car._id}>
+                        <img
+                          src={car.imageURL}
+                          className="img-fluid"
+                          alt={car.brand}
+                          width={500}
+                          height={500}
+                        />
+                      </Link>
+                        <DeleteBtn onClick={() => deleteCar(car._id)} />
+                      <UpdateBtn onClick={() => updateCar(car)} />
+                      <strong>
+                        <br />
+                        {car.brand} {car.model}
+                      </strong>
 
-            <TextArea
-              onChange={handleInputChange}
-              name="description"
-              placeholder="Description (Optional)"
-              value={formObject.description}
-            />
-            <FormBtn
-              disabled={!(formObject.year && formObject.model)}
-              onClick={handleFormSubmit}
-            >
-              Submit Car
-            </FormBtn>
-          </form>
-        </Col>
-        <Col size="md-6 sm-12">
-          {cars.length ? (
-            <List>
-              {cars.map((car) => (
-                <ListItem key={car._id}>
-                  <Link to={"/cars/" + car._id}>
-                    <img
-                      src={car.imageURL}
-                      className="img-fluid"
-                      alt={car.brand}
-                      width={500}
-                      height={500}
-                    />
-                  </Link>
-                  <strong>
-                    <br />
-                    {car.year} <br />
-                    {car.model} <br />
-                    {car.brand} <br />
-                    {car.description} <br />
-                  </strong>
-
-                  <DeleteBtn onClick={() => deleteCar(car._id)} />
-                  <UpdateBtn onClick={() => updateCar(car)} />
-                </ListItem>
-              ))}
-            </List>
-          ) : (
-            <h3>No Results to Display</h3>
-          )}
-        </Col>
-      </Row>)}
-    </Container>
+                    
+                    </ListItem>
+                  ))}
+                </List>
+              ) : (
+                <h3>No Results to Display</h3>
+              )}
+            </Col>
+          </Row>
+        )}
+      </Container>
     </div>
   );
 }
