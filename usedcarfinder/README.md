@@ -1,8 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to _________!
 
-## Available Scripts
+______ is an application that allows you to list your car for sale online, as well as purchase cars from private owners. First you will either create and account or sign in to your account. then you will post the year, make, model, a photo, and description of the vehicle that you are trying to sell. Once you click "Submit Car", your car is posted for everyone to see! You can also shop for vehicles by searching for vehicles that are already submitted in the database by other users. Happy car shopping! 
 
-In the project directory, you can run:
+* Created using MERN stack: MongoDB, Express, React, & Node.js
+* CRUD functionality
+* Bootstrap mobile optimized: Responsive
+* Firebase: Login purposes
+* Mongoose: Data storage
+* Axios : Promise based HTTP client for the browser and node.js
+
+## Pages
+
+1. Login Page: First you will be prompted to sign up or login. 
+
+2. Home Page: This is the home page. From this page, you can enter a car into the database and view "mini-postings" of the cars that you have posted for sale. You can also click on the "mini-postings" to view the full description of the vehicle. 
+
+3. Details Page: This page can be reached by clicking on your "mini-postings". This page will show all of the information about the vehicle that you have posted including the year, make, model, and description that you typed in when posting the car. 
+
+4. Search Page: This page can be used to search for cars that you might be interested in buying! 
+
+## Deployment
+
+### `npm install`
+
+Will install all dependencies:
+* Mongoose
+* Axios
+* Express
+* if-env
+* React-Router-DOM
+* Seed 
 
 ### `npm start`
 
@@ -12,10 +39,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -27,15 +50,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
@@ -43,26 +57,11 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Configuration
 
-### Analyzing the Bundle Size
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
