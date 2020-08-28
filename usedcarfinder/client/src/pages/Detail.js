@@ -18,29 +18,32 @@ function Detail(props) {
   }, []);
 
   useEffect(() => {
-    document.title = car.year + ' ' + car.brand + ' ' + car.model
-  }, [car])
+    document.title = car.year + " " + car.brand + " " + car.model;
+  }, [car]);
   console.log(car);
   return (
     <Container fluid>
-     
-      <Row>
+      {/* <Row>
         <Col size="md-10 md-offset-1">
           <article>
-            <h1>Brief Description</h1>
-            <p>{car.description}</p>
+           
           </article>
         </Col>
-      </Row>
+      </Row> */}
       <Row>
         <Col size="md-12">
-          {car.year} {car.brand} 
+          <h1>
+            {" "}
+            {car.year} {car.brand} {car.model}
+          </h1>
         </Col>
       </Row>
       <Row>
         <Col size="md-12">
-      <img src={car.imageURL} style={{width:250, height:250}}/>
-      </Col>
+          <img src={car.imageURL} style={{ width: 800, height: 500 }} />{" "}
+          <h5>Brief Description</h5>
+          <p>{car.description}</p>
+        </Col>
       </Row>
       <Row>
         <Col size="md-2">

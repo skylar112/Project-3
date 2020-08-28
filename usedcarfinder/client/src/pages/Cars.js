@@ -8,24 +8,36 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import { Redirect } from "react-router-dom";
 
-function Cars() {
+function Cars(props) {
   // Setting our component's initial state
   const [cars, setCar] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [userId, setUserId] = useState(null);
-  // Load all books and store them with setBooks
+
+  // useEffect(() => {
+  //   firebase.auth().onAuthStateChanged((user) => {
+  //     if (user) {
+  //       setUserId(user.uid);
+  //       // props.setUser(user)
+  //       setCar([]);
+  //       loadCars(user.uid);
+  //     } else {
+  //       setCar([]);
+  //     }
+  //   });
+  // }, []);
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        setUserId(user.uid);
-        setCar([]);
-        loadCars(user.uid);
-      } else {
-        setCar([]);
-      }
-    });
+    if (props.user) {
+      setUserId(props.user.uid);
+      // props.setUser(user)
+      setCar([]);
+      loadCars(props.user.uid);
+    } else {
+      setCar([]);
+    }
   }, []);
 
   // Loads all books and sets them to books
@@ -85,87 +97,91 @@ function Cars() {
   }
 
   return (
-    <div style={{ marginTop: '20px' }}>
-    <Container fluid>
-      <Row>
-        <Col size="md-6">
-          <form>
-            {formObject._id ? (
-              <input type="hidden" value={formObject._id} name="id" />
-            ) : null}
-            <Input
-              onChange={handleInputChange}
-              name="year"
-              placeholder="Year (required)"
-              value={formObject.year}
-            />
-            <Input
-              onChange={handleInputChange}
-              name="model"
-              placeholder="Model (required)"
-              value={formObject.model}
-            />
-            <Input
-              onChange={handleInputChange}
-              name="brand"
-              placeholder="Brand (required)"
-              value={formObject.brand}
-            />
+    <div style={{ marginTop: "20px" }}>
+      <Container fluid>
+        {!props.user ? (
+          <Redirect to="/" />
+        ) : (
+          <Row>
+            <Col size="md-6">
+              <form>
+                {formObject._id ? (
+                  <input type="hidden" value={formObject._id} name="id" />
+                ) : null}
+                <Input
+                  onChange={handleInputChange}
+                  name="year"
+                  placeholder="Year (required)"
+                  value={formObject.year}
+                />
+                <Input
+                  onChange={handleInputChange}
+                  name="model"
+                  placeholder="Model (required)"
+                  value={formObject.model}
+                />
+                <Input
+                  onChange={handleInputChange}
+                  name="brand"
+                  placeholder="Brand (required)"
+                  value={formObject.brand}
+                />
 
-            <Input
-              onChange={handleInputChange}
-              name="imageURL"
-              placeholder="imageURL (required)"
-              value={formObject.imageURL}
-            />
+                <Input
+                  onChange={handleInputChange}
+                  name="imageURL"
+                  placeholder="imageURL (required)"
+                  value={formObject.imageURL}
+                />
 
-            <TextArea
-              onChange={handleInputChange}
-              name="description"
-              placeholder="Description (Optional)"
-              value={formObject.description}
-            />
-            <FormBtn
-              disabled={!(formObject.year && formObject.model)}
-              onClick={handleFormSubmit}
-            >
-              Submit Car
-            </FormBtn>
-          </form>
-        </Col>
-        <Col size="md-6 sm-12">
-          {cars.length ? (
-            <List>
-              {cars.map((car) => (
-                <ListItem key={car._id}>
-                  <Link to={"/cars/" + car._id}>
-                    <img
-                      src={car.imageURL}
-                      className="img-fluid"
-                      alt={car.brand}
-                      width={500}
-                      height={500}
-                    />
-                  </Link>
-                  <strong>
-                    <br />
-                    {car.year} <br />
-                    {car.model} <br />
-                    {car.brand} <br />
-                    {car.description} <br />
-                  </strong>
+                <Input
+                  onChange={handleInputChange}
+                  name="description"
+                  placeholder="Price,Conditon,Comments (Optional)"
+                  value={formObject.description}
+                />
 
-                  <DeleteBtn onClick={() => deleteCar(car._id)} />
-                  <UpdateBtn onClick={() => updateCar(car)} />
-                </ListItem>
-              ))}
-            </List>
-          ) : (
-            <h3>No Results to Display</h3>
-          )}
-        </Col>
-      </Row>
-    </Container>
+                <FormBtn
+                  disabled={!(formObject.year && formObject.model)}
+                  onClick={handleFormSubmit}
+                  className=""
+                >
+                  Submit Car
+                </FormBtn>
+              </form>
+            </Col>
+            <Col size="md-6 sm-12">
+              {cars.length ? (
+                <List>
+                  {cars.map((car) => (
+                    <ListItem key={car._id}>
+                      <Link to={"/cars/" + car._id}>
+                        <img
+                          src={car.imageURL}
+                          className="img-fluid"
+                          alt={car.brand}
+                          width={500}
+                          height={500}
+                        />
+                      </Link>
+                        <DeleteBtn onClick={() => deleteCar(car._id)} />
+                      <UpdateBtn onClick={() => updateCar(car)} />
+                      <strong>
+                        <br />
+                        {car.brand} {car.model}
+                      </strong>
+
+                    
+                    </ListItem>
+                  ))}
+                </List>
+              ) : (
+                <h3>No Results to Display</h3>
+              )}
+            </Col>
+          </Row>
+        )}
+      </Container>
     </div>
   );
 }
