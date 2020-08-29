@@ -18,6 +18,9 @@ function App() {
         <Nav />
         <Jumbotron />
         <Switch>
+          <Cards />
+        </Switch>
+        <Switch>
           <Route exact path={["/cars"]}>
             <Cars user={user} />
           </Route>
@@ -31,9 +34,7 @@ function App() {
             <NoMatch />
           </Route>
         </Switch>
-        <Switch>
-          <Cards />
-        </Switch>
+        
       </div>
       <Footer />
     </Router>
