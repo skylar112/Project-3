@@ -16,6 +16,9 @@ function App() {
       {console.log("app", user)}
       <div>
         <Nav />
+          <Route exact path={["/", "/login/"]}>
+            <Login setUser={setUser} />
+          </Route>
         <Jumbotron />
         <Switch>
           <Cards />
@@ -26,9 +29,6 @@ function App() {
           </Route>
           <Route exact path="/cars/:id">
             <Detail />
-          </Route>
-          <Route exact path={["/", "/login/"]}>
-            <Login setUser={setUser} />
           </Route>
           <Route>
             <NoMatch />
