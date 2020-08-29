@@ -1,13 +1,21 @@
-.card{
+.card {
   background-color: #f3f4f7;
   border-color: rgb(245, 238, 238);
-  }
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
 
-.container{
-  font-family:Arial, Helvetica, sans-serif;
+
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
   color: rgb(155, 15, 15);
   font-size: 19px;
   text-align: center;
+
+}
   margin-top: 50px;
   margin-bottom: 50px;
    
@@ -32,6 +40,5 @@ h1{
   font-size: 30px;
   margin-bottom: px;
 }
-
 
 
