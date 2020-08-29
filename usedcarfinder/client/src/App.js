@@ -9,6 +9,8 @@ import Jumbotron from "./components/Jumbotron";
 import "./App.css";
 import Cards from "./components/cards";
 import Footer from "./components/Footer";
+import Videos from "./components/Videos";
+
 function App() {
   let [user, setUser] = useState(false);
   return (
@@ -16,9 +18,15 @@ function App() {
       {console.log("app", user)}
       <div>
         <Nav />
+          <Route exact path={["/", "/login/"]}>
+            <Login setUser={setUser} />
+          </Route>
         <Jumbotron />
         <Switch>
           <Cards />
+        </Switch>
+        <Switch>
+          <Videos />
         </Switch>
         <Switch>
           <Route exact path={["/cars"]}>
@@ -26,9 +34,6 @@ function App() {
           </Route>
           <Route exact path="/cars/:id">
             <Detail />
-          </Route>
-          <Route exact path={["/", "/login/"]}>
-            <Login setUser={setUser} />
           </Route>
           <Route>
             <NoMatch />
