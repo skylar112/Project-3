@@ -19,7 +19,12 @@ function Nav() {
       <a className="navbar-brand text-light" href="/">
         Home
       </a>
-
+      <a className="navbar-brand text-light" href="/">
+        CarTracker
+      </a>
+      <a className="navbar-brand text-light" href="/">
+        Videos
+      </a>
       {isSignedIn ? (
         <a
           className="navbar-brand text-light"
