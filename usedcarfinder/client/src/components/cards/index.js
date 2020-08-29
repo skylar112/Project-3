@@ -77,7 +77,9 @@ export default class Services extends Component {
                         </div>
                     </div>
                 </div>
+                
             </div>
+           
         );
     }
 }

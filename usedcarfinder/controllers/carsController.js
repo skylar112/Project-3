@@ -2,7 +2,7 @@ const db = require("../models");
 
 console.log("this is db" + db.Car);
 
-// Defining methods for the booksController
+
 
 module.exports = {
   findAll: function (req, res) {

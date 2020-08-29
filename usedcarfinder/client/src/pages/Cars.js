@@ -10,29 +10,21 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import { Redirect } from "react-router-dom";
 
+
+
+
 function Cars(props) {
-  // Setting our component's initial state
+  
   const [cars, setCar] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [userId, setUserId] = useState(null);
 
-  // useEffect(() => {
-  //   firebase.auth().onAuthStateChanged((user) => {
-  //     if (user) {
-  //       setUserId(user.uid);
-  //       // props.setUser(user)
-  //       setCar([]);
-  //       loadCars(user.uid);
-  //     } else {
-  //       setCar([]);
-  //     }
-  //   });
-  // }, []);
+ 
 
   useEffect(() => {
     if (props.user) {
       setUserId(props.user.uid);
-      // props.setUser(user)
+     
       setCar([]);
       loadCars(props.user.uid);
     } else {
@@ -40,14 +32,14 @@ function Cars(props) {
     }
   }, []);
 
-  // Loads all books and sets them to books
+
   function loadCars(uid) {
     API.getCars({ userId: uid })
       .then((res) => setCar(res.data))
       .catch((err) => console.log(err));
   }
 
-  // Deletes a book from the database with a given id, then reloads books from the db
+  
   function deleteCar(id) {
     API.deleteCar(id)
       .then((res) => loadCars(userId))
@@ -58,7 +50,7 @@ function Cars(props) {
     setFormObject({ ...car });
   }
 
-  // Handles updating component state when the user types into the input field
+  
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({ ...formObject, [name]: value });
@@ -66,13 +58,12 @@ function Cars(props) {
 
   console.log(formObject);
 
-  // When the form is submitted, use the API.saveBook method to save the book data
-  // Then reload books from the database
+
   function handleFormSubmit(event) {
     event.preventDefault();
 
     if (formObject._id) {
-      /// update the car
+    
       API.updateCar(formObject._id, {
         year: formObject.year,
         model: formObject.model,
