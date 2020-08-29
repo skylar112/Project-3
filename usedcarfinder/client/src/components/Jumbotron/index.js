@@ -41,6 +41,13 @@ const items = [
     altText: "",
     caption: "Honda",
   },
+
+  {
+    src:
+      "https://i.pinimg.com/originals/3d/5c/2c/3d5c2c305a99f585658fd260122ec111.jpg",
+    altText: "",
+    caption: "Ferrari",
+  },
 ];
 class Jumbotron extends Component {
   constructor(props) {
@@ -116,6 +123,11 @@ class Jumbotron extends Component {
             onClickHandler={this.previous}
           />
           <CarouselControl
+            direction="next"
+            directionText="Next"
+            onClickHandler={this.next}
+          />
+           <CarouselControl
             direction="next"
             directionText="Next"
             onClickHandler={this.next}

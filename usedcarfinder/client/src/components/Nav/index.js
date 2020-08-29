@@ -17,6 +17,7 @@ function Nav() {
   return (
     <nav className="navbar navbar-light bg-dark">
       <a className="navbar-brand text-light" href="/">
+        <img src=".../images/logo.png" alt=""></img>
         Home
       </a>
       <a className="navbar-brand text-light" href="/">

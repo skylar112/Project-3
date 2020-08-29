@@ -3,6 +3,9 @@ import { Redirect } from "react-router-dom";
 // import "./App.css";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+import Modal from 'react-modal';
+
+
 
 
 
@@ -12,7 +15,7 @@ firebase.initializeApp({
 });
 
 class Login extends Component {
-  state = { isSignedIn: false };
+  state = { isSignedIn: false, isModalOpen: true };
 
   uiConfig = {
     signInFlow: "popup",
@@ -32,7 +35,7 @@ class Login extends Component {
       this.props.setUser(user)
       this.setState({ isSignedIn: !!user });
       console.log("log in", user);
-    
+
 
     });
   };
@@ -43,11 +46,24 @@ class Login extends Component {
         {this.state.isSignedIn ? (
           <Redirect to="/cars" />
         ) : (
-          <StyledFirebaseAuth
-            uiConfig={this.uiConfig}
-            firebaseAuth={firebase.auth()}
-          />
-        )}
+          <div>
+                    
+            <Modal
+              isOpen={this.state.isModalOpen}
+              // onAfterOpen={afterOpenModal}
+              // onRequestClose={closeModal}
+              // style={customStyles}
+              contentLabel="Example Modal"
+            >
+             <button onClick={()=> this.setState({isModalOpen:false}) }>CLOSE</button>
+             
+              <StyledFirebaseAuth
+                uiConfig={this.uiConfig}
+                firebaseAuth={firebase.auth()}
+              />
+            </Modal>
+            </div>
+          )}
       </div>
     );
   }
