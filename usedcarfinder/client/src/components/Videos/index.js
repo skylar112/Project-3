@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import {
-    Card, CardImg, CardBody,
-    CardTitle, Button
+    Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption, Card, CardImg, 
+    CardTitle,
 } from 'reactstrap';
 import "./style.css";
 
-export default class Services extends Component {
+export default class Videos extends Component {
     render() {
         return (
             <div className="card">
