@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-// import "./App.css";
+import "../App.css";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import Modal from 'react-modal';
@@ -46,22 +46,26 @@ class Login extends Component {
         {this.state.isSignedIn ? (
           <Redirect to="/cars" />
         ) : (
-          <div>
-                    
-            <Modal
-              isOpen={this.state.isModalOpen}
+            <div className="Modal">
+
+              <Modal
+                isOpen={this.state.isModalOpen}
               // onAfterOpen={afterOpenModal}
               // onRequestClose={closeModal}
               // style={customStyles}
-              contentLabel="Example Modal"
-            >
-             <button onClick={()=> this.setState({isModalOpen:false}) }>CLOSE</button>
-             
-              <StyledFirebaseAuth
-                uiConfig={this.uiConfig}
-                firebaseAuth={firebase.auth()}
-              />
-            </Modal>
+              // contentLabel="Example Modal"
+              >
+                <div class="modal-header">
+                  <h5>Welcome Car Finder</h5>
+                </div>
+                <StyledFirebaseAuth
+                  uiConfig={this.uiConfig}
+                  firebaseAuth={firebase.auth()}
+                />
+                <div class="modal-footer">
+                  <button className="btn btn-primary" onClick={() => this.setState({ isModalOpen: false })}>CLOSE</button>
+                </div>
+              </Modal>
             </div>
           )}
       </div>

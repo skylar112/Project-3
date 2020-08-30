@@ -9,6 +9,7 @@ body {
 
 .App {
   text-align: center;
+    
 }
 
 .App-logo {
@@ -41,6 +42,21 @@ body {
   color: #61dafb;
 }
 
+h5{
+  font-family: 'Damion', cursive;
+  font-size: 50px;
+  color: white;
+
+}
+
+.modal-header{
+      
+background: #EB5757;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+     }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -48,4 +64,11 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.btn{
+  position: relative;
+  float: right;
+
+
 }
