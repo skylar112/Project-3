@@ -21,10 +21,13 @@ export default class Videos extends Component {
             <div className="container">
                 <h1>Found your next car? </h1>
                 <div className="row unline-block">
-                    <div className="col-6">
+                    <div className="col-6 player-wrapper">
                         <div>
                             <ReactPlayer
+                                className='react-player'
                                 url={this.videoUrl[this.state.videoindex]}
+                                width="100%"
+                                height="100%"
                             />
                         </div>
                     </div>
