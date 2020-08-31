@@ -25,7 +25,9 @@
 .cards{
   transition: transform .1s;
   box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+  height:auto;
+ width:auto;
+}
 
 .cards:hover {
   -ms-transform: scale(0.3); /* IE 9 */
