@@ -18,10 +18,10 @@ function App() {
       {console.log("app", user)}
       <div>
         <Nav />
-          <Route exact path={["/", "/login/"]}>
-            <Login setUser={setUser} />
-          </Route>
-        <Jumbotron />
+        <Route exact path={["/", "/login/"]}>
+          <Login setUser={setUser} />
+        </Route>
+                <Jumbotron />
         <Switch>
           <Cards />
         </Switch>
@@ -39,7 +39,7 @@ function App() {
             <NoMatch />
           </Route>
         </Switch>
-        
+
       </div>
       <Footer />
     </Router>

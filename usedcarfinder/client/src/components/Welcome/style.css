@@ -8,26 +8,19 @@
   
 }
 
-.body{
-  opacity: 60%;
-}
-
 .container {
   font-family:  'Russo One', sans-serif;
-  /* background-color: grey; */
   color: rgb(32, 46, 105);
   font-size: 19px;
   text-align: center;
-  /* opacity: 80%; */
+  opacity: 80%;
 }
   
 
 .cards{
   transition: transform .1s;
   box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height:auto;
- width:auto;
-}
+  }
 
 .cards:hover {
   -ms-transform: scale(0.3); /* IE 9 */
