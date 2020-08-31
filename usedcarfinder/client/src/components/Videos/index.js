@@ -6,24 +6,29 @@ import {
 import ReactPlayer from "react-player"
 
 export default class Videos extends Component {
-state= {videoindex:0}
+    state = { videoindex: 0 }
 
-videoUrl = [
+    videoUrl = [
 
         "https://www.youtube.com/watch?v=BtY9Nmm2z0U",
+        "https://www.youtube.com/watch?v=BHgwd6YKWlU",
+        "https://www.youtube.com/watch?v=RUx6FfhPLw4",
+        "https://www.youtube.com/watch?v=zgT_4khybEw",
+        "https://www.youtube.com/watch?v=vyaNeKZjHcI",
+        "https://www.youtube.com/watch?v=drbhNLvYxGQ",
         "https://www.youtube.com/watch?v=xvtVSGpKdto"
 
-]
+    ]
 
     render() {
         return (
             <div className="container">
-                <h1>Found your next car? </h1>
-                <div className="row unline-block">
+                <h1>Found your next car? Scroll through our video player for help on next steps</h1>
+                 <div className="row ">
                     <div className="col-6">
                         <div>
                             <ReactPlayer
-                                url= {this.videoUrl[this.state.videoindex]}
+                                url={this.videoUrl[this.state.videoindex]}
                             />
                         </div>
                     </div>
@@ -32,8 +37,8 @@ videoUrl = [
                             <h1>{this.state.videoindex}</h1>
                         </div>
                     </div>
-                    <button onClick={()=> this.setState({videoindex:this.state.videoindex -1})}>Left</button>
-                    <button onClick={()=> this.setState({videoindex:this.state.videoindex +1})}>Rigth</button>
+                    <button onClick={() => this.setState({ videoindex: this.state.videoindex - 1 })}>Previous</button>
+                    <button onClick={() => this.setState({ videoindex: this.state.videoindex + 1 })}>Next</button>
                 </div>
             </div>
         );

@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer text-center text-light">
       <hr />
 
-      <h3>Used Car Tracker build with React</h3>
+      <h3>React Cars built by Team Raf-Attack &copy;2020 </h3>
     </footer>
   );
 }

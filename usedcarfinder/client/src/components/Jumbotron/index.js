@@ -11,6 +11,7 @@ const items = [
   
 
   {
+    
     src:
       "https://di-uploads-pod5.dealerinspire.com/waltersmercedesbenz/uploads/2017/08/2018-e-coupe-exterior.jpg",
     altText: "Mercedes",
@@ -95,7 +96,7 @@ class Jumbotron extends Component {
           key={item.src}
         >
           <img
-            style={{ borderRadius: "0px 0px 20px 20px" }}
+       
             src={item.src}
             alt={item.altText}
             className="d-block img-fluid w-100 h-100"

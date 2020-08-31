@@ -55,9 +55,10 @@ class Login extends Component {
               // style={customStyles}
               // contentLabel="Example Modal"
               >
-                <div class="modal-header">
-                  <h5>Welcome Car Finder</h5>
+                <div class="modal-header" >
+                  <h5>Welcome to React Cars - Please log in</h5>
                 </div>
+                
                 <StyledFirebaseAuth
                   uiConfig={this.uiConfig}
                   firebaseAuth={firebase.auth()}
