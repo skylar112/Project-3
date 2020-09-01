@@ -26,6 +26,7 @@ function Nav() {
       <a className="navbar-brand text-light" href="/">
         Videos
       </a>
+      <h3>React Cars</h3>
       {isSignedIn ? (
         <a
           className="navbar-brand text-light"
