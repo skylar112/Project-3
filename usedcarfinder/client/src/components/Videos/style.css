@@ -1,3 +1,4 @@
+
 .card {
   background-color: #f3f4f7;
   border-color: rgb(245, 238, 238);
@@ -25,13 +26,18 @@ h1{
   transform: scale(1.1);
 }
 
+
 h1 {
-  border-bottom: 2px solid brown;
+  border-bottom: 2px solid rgb(8, 8, 8);
   text-align: left;
-  color: black;
+  color: white;
   padding: 15px;
   font-size: 30px;
   margin-bottom: px;
+}
+
+.video{
+  margin-left:70px; 
 }
 
 .player-wrapper {
@@ -43,4 +49,15 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.Next{
+ margin-left: 491px;
+ margin-top: 4px;
+
+}
+
+.Previous{
+  margin-left: 15px;
+  margin-top: 4px;
 }
