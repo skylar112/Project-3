@@ -1,17 +1,14 @@
 .card {
   background-color: #c4ceee;
   /* border-color: rgb(218, 45, 45); */
-  
+
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 5%;
   margin-bottom: 2%;
 }
 
-
-.body{
-  /* opacity: 20%; */
-=======.body {
+.body {
   opacity: 60%;
 }
 

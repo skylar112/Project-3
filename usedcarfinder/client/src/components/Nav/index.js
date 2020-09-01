@@ -3,7 +3,6 @@ import firebase from "firebase";
 
 function Nav() {
   const [isSignedIn, setSignInStatus] = React.useState(false);
-
   React.useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -13,25 +12,19 @@ function Nav() {
       }
     });
   }, []);
-
   return (
     <nav className="navbar navbar-light bg-dark">
       <a className="navbar-brand text-light" href="/">
         <img src=".../images/logo.png" alt=""></img>
         Home
       </a>
-
-      <a className="navbar-brand text-light" href="/">
-        Car-Tracker
-
       <a className="navbar-brand text-light" href="/about">
         About
-
       </a>
+      <h3 className="text-light">React Cars</h3>
       <a className="navbar-brand text-light" href="/">
-        Video Resources
+        Videos
       </a>
-      <h3>React Cars</h3>
       {isSignedIn ? (
         <a
           className="navbar-brand text-light"
@@ -48,5 +41,4 @@ function Nav() {
     </nav>
   );
 }
-
 export default Nav;
