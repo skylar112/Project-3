@@ -34,7 +34,7 @@ class About extends Component {
 
             <div class="modal-body">
               <h2>React Cars</h2>
-              <p>Welcome to React Cars where you can save you can save your favorite cars with details when looking to buy a car.  </p>
+              <p>Welcome to React Cars where you can save your favorite cars with nformation when looking to buy a car.</p>
             </div>
 
             <div class="modal-footer">
