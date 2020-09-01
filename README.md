@@ -30,6 +30,8 @@ Will install all dependencies:
 * if-env
 * React-Router-DOM
 * Seed 
+* ReactStrap
+* React Player
 
 ### `npm start`
 
