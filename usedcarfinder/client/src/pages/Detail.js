@@ -7,7 +7,6 @@ import { Card } from "reactstrap";
 function Detail(props) {
   const [car, setCar] = useState({});
 
- 
   const { id } = useParams();
 
   useEffect(() => {

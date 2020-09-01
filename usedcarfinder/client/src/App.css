@@ -6,28 +6,24 @@ body {
   background-size: cover;
 
   background: linear-gradient(-45deg, #ee7752, #88435e, #2d5868, #728580);
-	background-size: 400% 400%;
-	animation: gradient 8s ease infinite;
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-
-
-  
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .App {
   text-align: center;
-    
 }
 
 .App-logo {
@@ -60,20 +56,29 @@ body {
   color: #61dafb;
 }
 
-h5{
-  font-family: 'Damion', cursive;
+h5 {
+  font-family: "Damion", cursive;
   font-size: 50px;
   color: white;
-
 }
 
-.modal-header{
-      
-background: #EB5757;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-     }
+.modal-header {
+  background: #eb5757; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #eb5757
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #eb5757
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.modal-body {
+  font-size: 24px;
+  text-align: center;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -84,9 +89,7 @@ background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, F
   }
 }
 
-.btn{
+.btn {
   position: relative;
   float: right;
-
-
 }
