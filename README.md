@@ -1,6 +1,6 @@
-# Welcome to _________!
+# Welcome to React Cars!
 
-______ is an application that allows you to list your car for sale online, as well as purchase cars from private owners. First you will either create and account or sign in to your account. then you will post the year, make, model, a photo, and description of the vehicle that you are trying to sell. Once you click "Submit Car", your car is posted for everyone to see! You can also shop for vehicles by searching for vehicles that are already submitted in the database by other users. Happy car shopping! 
+React Cars is an application that allows you to list your car for sale online, as well as purchase cars from private owners. First you will either create and account or sign in to your account. then you will post the year, make, model, a photo, and description of the vehicle that you are trying to sell. Once you click "Submit Car", your car is posted for everyone to see! You can also shop for vehicles by searching for vehicles that are already submitted in the database by other users. Happy car shopping! 
 
 * Created using MERN stack: MongoDB, Express, React, & Node.js
 * CRUD functionality
@@ -30,6 +30,8 @@ Will install all dependencies:
 * if-env
 * React-Router-DOM
 * Seed 
+* ReactStrap
+* React Player
 
 ### `npm start`
 

@@ -10,7 +10,9 @@ import "./App.css";
 import Cards from "./components/cards";
 import Footer from "./components/Footer";
 import Videos from "./components/Videos";
+import Newcars from "./components/Newcars";
 import About from "./pages/About";
+
 
 function App() {
   let [user, setUser] = useState(false);
@@ -23,12 +25,20 @@ function App() {
           <Login setUser={setUser} />
         </Route>
         <Jumbotron />
+
+        <Switch>
+          <Newcars />
+        </Switch>
+
+
         <Switch>
           <Cards />
         </Switch>
+
         <Switch>
           <Videos />
         </Switch>
+
         <Switch>
           <Route exact path={["/cars"]}>
             <Cars user={user} />
@@ -43,6 +53,7 @@ function App() {
             <NoMatch />
           </Route>
         </Switch>
+
       </div>
       <Footer />
     </Router>
