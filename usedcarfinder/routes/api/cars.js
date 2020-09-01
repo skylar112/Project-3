@@ -1,9 +1,7 @@
 const router = require("express").Router();
 const carsController = require("../../controllers/carsController");
 
-
 router.route("/").get(carsController.findAll).post(carsController.create);
-
 
 router
   .route("/:id")

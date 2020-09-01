@@ -1,11 +1,10 @@
 import axios from "axios";
 
 export default {
-  
   getCars: function ({ userId }) {
     return axios.get("/api/cars?userId=" + userId);
   },
-  
+
   getCar: function (id) {
     return axios.get("/api/cars/" + id);
   },
@@ -18,7 +17,7 @@ export default {
   deleteCar: function (id) {
     return axios.delete("/api/cars/" + id);
   },
- 
+
   saveCar: function (carData) {
     return axios.post("/api/cars", carData);
   },
