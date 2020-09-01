@@ -41,7 +41,7 @@ class About extends Component {
               <button
                 className="btn btn-primary"
                 onClick={() => this.setState({ isModalOpen: false })}
-              >
+              > 
                 CLOSE
               </button>
             </div>
