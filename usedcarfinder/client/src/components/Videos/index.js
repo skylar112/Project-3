@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Card, CardImg, CardBody, CardTitle, Button } from "reactstrap";
 import ReactPlayer from "react-player";
 import "./style.css";
+
 export default class Videos extends Component {
   state = { videoindex: 0 };
   videoUrl = [

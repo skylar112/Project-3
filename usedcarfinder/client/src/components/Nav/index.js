@@ -21,12 +21,17 @@ function Nav() {
         <img src=".../images/logo.png" alt=""></img>
         Home
       </a>
+
+      <a className="navbar-brand text-light" href="/">
+        Car-Tracker
+
       <a className="navbar-brand text-light" href="/about">
         About
+
       </a>
       <h3>React Cars</h3>
       <a className="navbar-brand text-light" href="/">
-        Videos
+        Video Resources
       </a>
       
       {isSignedIn ? (
