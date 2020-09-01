@@ -6,44 +6,43 @@
   margin-right: 10%;
   margin-top: 5%;
   margin-bottom: 2%;
-  
 }
+
 
 .body{
   /* opacity: 20%; */
+=======.body {
+  opacity: 60%;
 }
 
 .container {
-  font-family:  'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
   /* background-color: grey; */
   color: rgb(32, 67, 207);
   font-size: 19px;
   text-align: center;
   /* opacity: 80%; */
 }
-  
 
-.cards{
-  transition: transform .1s;
+.cards {
+  transition: transform 0.1s;
   box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height:auto;
- width:auto;
+  height: auto;
+  width: auto;
 }
 
 .cards:hover {
   -ms-transform: scale(0.3); /* IE 9 */
-   -webkit-transform: scale(0.5);  
-   transform: scale(1.1); 
-} 
+  -webkit-transform: scale(0.5);
+  transform: scale(1.1);
+}
 
-h1{
+h1 {
   border-bottom: 2px solid brown;
-  font-family:  'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
   text-align: left;
-  color:black;
+  color: black;
   padding: 15px;
   font-size: 27px;
   margin-bottom: px;
 }
-
-

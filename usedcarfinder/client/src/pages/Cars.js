@@ -14,15 +14,16 @@ import { Redirect } from "react-router-dom";
 
 function Cars(props) {
   
+
+function Cars(props) {
   const [cars, setCar] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [userId, setUserId] = useState(null);
 
-
   useEffect(() => {
     if (props.user) {
       setUserId(props.user.uid);
-     
+
       setCar([]);
       loadCars(props.user.uid);
     } else {
@@ -30,14 +31,12 @@ function Cars(props) {
     }
   }, []);
 
-
   function loadCars(uid) {
     API.getCars({ userId: uid })
       .then((res) => setCar(res.data))
       .catch((err) => console.log(err));
   }
 
-  
   function deleteCar(id) {
     API.deleteCar(id)
       .then((res) => loadCars(userId))
@@ -48,7 +47,6 @@ function Cars(props) {
     setFormObject({ ...car });
   }
 
-  
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({ ...formObject, [name]: value });
@@ -56,12 +54,10 @@ function Cars(props) {
 
   console.log(formObject);
 
-
   function handleFormSubmit(event) {
     event.preventDefault();
 
     if (formObject._id) {
-    
       API.updateCar(formObject._id, {
         year: formObject.year,
         model: formObject.model,
@@ -153,14 +149,12 @@ function Cars(props) {
                           height={500}
                         />
                       </Link>
-                        <DeleteBtn onClick={() => deleteCar(car._id)} />
+                      <DeleteBtn onClick={() => deleteCar(car._id)} />
                       <UpdateBtn onClick={() => updateCar(car)} />
                       <strong>
                         <br />
                         {car.brand} {car.model}
                       </strong>
-
-                    
                     </ListItem>
                   ))}
                 </List>

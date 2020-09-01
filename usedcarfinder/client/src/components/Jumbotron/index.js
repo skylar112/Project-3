@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import  style from "../Jumbotron/style.css";
+
 import {
   Carousel,
   CarouselItem,
@@ -8,10 +8,7 @@ import {
   CarouselCaption,
 } from "reactstrap";
 const items = [
-  
-
   {
-    
     src:
       "https://di-uploads-pod5.dealerinspire.com/waltersmercedesbenz/uploads/2017/08/2018-e-coupe-exterior.jpg",
     altText: "Mercedes",
@@ -96,7 +93,6 @@ class Jumbotron extends Component {
           key={item.src}
         >
           <img
-       
             src={item.src}
             alt={item.altText}
             className="d-block img-fluid w-100 h-100"
@@ -128,7 +124,7 @@ class Jumbotron extends Component {
             directionText="Next"
             onClickHandler={this.next}
           />
-           <CarouselControl
+          <CarouselControl
             direction="next"
             directionText="Next"
             onClickHandler={this.next}

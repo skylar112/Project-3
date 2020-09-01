@@ -11,6 +11,8 @@ import Cards from "./components/cards";
 import Footer from "./components/Footer";
 import Videos from "./components/Videos";
 import Newcars from "./components/Newcars";
+import About from "./pages/About";
+
 
 function App() {
   let [user, setUser] = useState(false);
@@ -28,6 +30,7 @@ function App() {
           <Newcars />
         </Switch>
 
+
         <Switch>
           <Cards />
         </Switch>
@@ -43,11 +46,14 @@ function App() {
           <Route exact path="/cars/:id">
             <Detail />
           </Route>
+          <Route exact path={["/about"]}>
+            <About />
+          </Route>
           <Route>
             <NoMatch />
           </Route>
         </Switch>
-        
+
       </div>
       <Footer />
     </Router>
