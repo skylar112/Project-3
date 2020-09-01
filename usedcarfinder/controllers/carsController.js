@@ -2,8 +2,6 @@ const db = require("../models");
 
 console.log("this is db" + db.Car);
 
-
-
 module.exports = {
   findAll: function (req, res) {
     db.Car.find(req.query)
@@ -15,8 +13,8 @@ module.exports = {
     db.Car.findById(req.params.id)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => {
-        console.log(err)
-        res.status(422).json(err)
+        console.log(err);
+        res.status(422).json(err);
       });
   },
   create: function (req, res) {

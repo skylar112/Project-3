@@ -21,6 +21,7 @@ class About extends Component {
     return (
       <div className="App">
         <div className="Modal">
+
           <Modal
             isOpen={this.state.isModalOpen}
             // onAfterOpen={afterOpenModal}
@@ -28,13 +29,19 @@ class About extends Component {
             style={customStyles}
             // contentLabel="Example Modal"
           >
+       
+      
+      <Modal isOpen={this.state.isModalOpen}>
+
             <div class="modal-header">
               <h5>How to use our page</h5>
             </div>
 
             <div class="modal-body">
-              <h2>React Cars</h2>
-              <p>Welcome to React Cars where you can save your favorite cars with information when looking to buy a car.</p>
+
+              <h2>WELCOME</h2>
+              <p>Welcome to React Cars  </p>
+
             </div>
 
             <div class="modal-footer">
