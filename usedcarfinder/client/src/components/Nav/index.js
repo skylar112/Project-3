@@ -1,5 +1,6 @@
 import React from "react";
 import firebase from "firebase";
+import "./style.css";
 
 function Nav() {
   const [isSignedIn, setSignInStatus] = React.useState(false);
@@ -21,10 +22,13 @@ function Nav() {
       <a className="navbar-brand text-light" href="/about">
         About
       </a>
-      <h3 className="text-light">React Cars</h3>
+
+      <h3>React Cars</h3>
+
       <a className="navbar-brand text-light" href="/">
         Videos
       </a>
+
       {isSignedIn ? (
         <a
           className="navbar-brand text-light"

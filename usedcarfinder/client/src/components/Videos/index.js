@@ -5,7 +5,6 @@ import "./style.css";
 
 export default class Videos extends Component {
   state = { videoindex: 0 };
-
   videoUrl = [
     "https://www.youtube.com/watch?v=BtY9Nmm2z0U",
     "https://www.youtube.com/watch?v=BHgwd6YKWlU",
@@ -15,7 +14,6 @@ export default class Videos extends Component {
     "https://www.youtube.com/watch?v=drbhNLvYxGQ",
     "https://www.youtube.com/watch?v=xvtVSGpKdto",
   ];
-
   render() {
     return (
       <div className="video">
