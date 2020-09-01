@@ -33,8 +33,8 @@ class About extends Component {
             </div>
 
             <div class="modal-body">
-              <h2>WELCOME</h2>
-              <p>Welcome to React Cars  </p>
+              <h2>React Cars</h2>
+              <p>Welcome to React Cars where you can save you can save your favorite cars with details when looking to buy a car.  </p>
             </div>
 
             <div class="modal-footer">
