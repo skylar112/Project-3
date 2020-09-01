@@ -28,10 +28,11 @@ function Nav() {
         About
 
       </a>
+      <h3>React Cars</h3>
       <a className="navbar-brand text-light" href="/">
         Video Resources
       </a>
-      <h3>React Cars</h3>
+      
       {isSignedIn ? (
         <a
           className="navbar-brand text-light"
