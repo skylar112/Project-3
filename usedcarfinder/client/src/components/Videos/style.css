@@ -1,4 +1,3 @@
-
 .card {
   background-color: #f3f4f7;
   border-color: rgb(245, 238, 238);
@@ -13,9 +12,7 @@
   margin-bottom: 50px;
 }
 
-
-h1{
-.cards {
+h1 {
   transition: transform 0.1s;
   box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -26,7 +23,6 @@ h1{
   transform: scale(1.1);
 }
 
-
 h1 {
   border-bottom: 2px solid rgb(8, 8, 8);
   text-align: left;
@@ -36,8 +32,8 @@ h1 {
   margin-bottom: px;
 }
 
-.video{
-  margin-left:70px; 
+.video {
+  margin-left: 70px;
 }
 
 .player-wrapper {
@@ -51,13 +47,12 @@ h1 {
   left: 0;
 }
 
-.Next{
- margin-left: 491px;
- margin-top: 4px;
-
+.Next {
+  margin-left: 491px;
+  margin-top: 4px;
 }
 
-.Previous{
+.Previous {
   margin-left: 15px;
   margin-top: 4px;
 }

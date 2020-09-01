@@ -12,7 +12,6 @@ import { Redirect } from "react-router-dom";
 
 
 
-function Cars(props) {
   
 
 function Cars(props) {
