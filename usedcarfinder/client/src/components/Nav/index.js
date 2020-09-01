@@ -21,10 +21,10 @@ function Nav() {
         Home
       </a>
       <a className="navbar-brand text-light" href="/">
-        CarTracker
+        Car-Tracker
       </a>
       <a className="navbar-brand text-light" href="/">
-        Videos
+        Video Resources
       </a>
       {isSignedIn ? (
         <a

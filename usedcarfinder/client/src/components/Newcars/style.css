@@ -1,22 +1,21 @@
 .card {
-  background-color: #c4ceee;
-  /* border-color: rgb(218, 45, 45); */
-  
-  margin-left: 10%;
-  margin-right: 10%;
+  background-color: #f3f4f7;
+  border-color: rgb(245, 238, 238);
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 5%;
   margin-bottom: 2%;
   
 }
 
 .body{
-  /* opacity: 20%; */
+  opacity: 60%;
 }
 
 .container {
   font-family:  'Russo One', sans-serif;
   /* background-color: grey; */
-  color: rgb(32, 67, 207);
+  color: rgb(32, 46, 105);
   font-size: 19px;
   text-align: center;
   /* opacity: 80%; */

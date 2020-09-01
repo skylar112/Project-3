@@ -12,15 +12,12 @@ import { Redirect } from "react-router-dom";
 
 
 
-
 function Cars(props) {
-  // <div className="container"></div>
   
   const [cars, setCar] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [userId, setUserId] = useState(null);
 
- 
 
   useEffect(() => {
     if (props.user) {
