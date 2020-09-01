@@ -10,6 +10,8 @@ import "./App.css";
 import Cards from "./components/cards";
 import Footer from "./components/Footer";
 import Videos from "./components/Videos";
+import About from "./pages/About";
+
 
 function App() {
   let [user, setUser] = useState(false);
@@ -35,6 +37,10 @@ function App() {
           <Route exact path="/cars/:id">
             <Detail />
           </Route>
+          <Route exact path={["/about"]}>
+          <About />
+          
+        </Route>
           <Route>
             <NoMatch />
           </Route>
