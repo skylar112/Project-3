@@ -8,7 +8,7 @@ export default class Services extends Component {
         <div className="container">
           <h1>Best Used Cars</h1>
           <div className="row unline-block">
-            <div className="col-3">
+            <div className="col-12 col-md-3 cars">
               <a
                 href="https://cars.usnews.com/cars-trucks/rankings/used/midsize-cars-1"
                 target="_blank"
@@ -23,7 +23,7 @@ export default class Services extends Component {
                 <CardTitle>Sedans</CardTitle>
               </a>
             </div>
-            <div className="col-3 cars">
+            <div className="col-12 col-md-3 cars">
               <a
                 href="https://www.autolist.com/guides/best-used-sports-cars-under-30000"
                 target="_blank"
@@ -38,7 +38,7 @@ export default class Services extends Component {
                 <CardTitle>Sport</CardTitle>
               </a>
             </div>
-            <div className="col-3">
+            <div className="col-12 col-md-3 cars">
               <a
                 href="https://cars.usnews.com/cars-trucks/rankings/used/compact-suvs-1"
                 target="_blank"
@@ -53,7 +53,7 @@ export default class Services extends Component {
                 <CardTitle>Compact SUV</CardTitle>
               </a>
             </div>
-            <div className="col-3">
+            <div className="col-12 col-md-3 cars">
               <a
                 href="https://cars.usnews.com/cars-trucks/used-cars/for-sale/suv"
                 target="_blank"
@@ -71,7 +71,7 @@ export default class Services extends Component {
           </div>
           <br></br>
           <div className="row unline-block">
-            <div className="col-3">
+          <div className="col-12 col-md-3 cars">
               <a
                 href="https://cars.usnews.com/cars-trucks/used-cars/for-sale/minivan"
                 target="_blank"
@@ -86,7 +86,7 @@ export default class Services extends Component {
                 <CardTitle>Minivan</CardTitle>
               </a>
             </div>
-            <div className="col-3">
+            <div className="col-12 col-md-3 cars">
               <a
                 href="https://cars.usnews.com/cars-trucks/rankings/used/upscale-midsize-cars-3"
                 target="_blank"
@@ -101,7 +101,7 @@ export default class Services extends Component {
                 <CardTitle>Luxury Sedan</CardTitle>
               </a>
             </div>
-            <div className="col-3">
+            <div className="col-12 col-md-3 cars">
               <a
                 href="https://cars.usnews.com/cars-trucks/best-used-luxury-suv"
                 target="_blank"
@@ -116,7 +116,7 @@ export default class Services extends Component {
                 <CardTitle>Luxury SUV</CardTitle>
               </a>
             </div>
-            <div className="col-3">
+            <div className="col-12 col-md-3 cars">
               <a
                 href="https://cars.usnews.com/cars-trucks/rankings/used/full-size-trucks-1"
                 target="_blank"

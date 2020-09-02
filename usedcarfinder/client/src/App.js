@@ -12,49 +12,50 @@ import Footer from "./components/Footer";
 import Videos from "./components/Videos";
 import Newcars from "./components/Newcars";
 import About from "./pages/About";
-
+import { Container } from "reactstrap";
 
 function App() {
   let [user, setUser] = useState(false);
   return (
     <Router>
       {console.log("app", user)}
-      <div>
-        <Nav />
-        <Route exact path={["/", "/login/"]}>
-          <Login setUser={setUser} />
-        </Route>
-        <Jumbotron />
 
-        <Switch>
-          <Newcars />
-        </Switch>
+      <Nav />
+      <Route exact path={["/", "/login/"]}>
+        <Login setUser={setUser} />
+      </Route>
+      <Jumbotron />
+      <Container>
+        <div className="col-12">
+          <Switch>
+            <Newcars />
+          </Switch>
 
+          <Switch>
+            <Cards />
+          </Switch>
 
-        <Switch>
-          <Cards />
-        </Switch>
+          <Switch>
+            <Videos />
+          </Switch>
 
-        <Switch>
-          <Videos />
-        </Switch>
+          <Switch>
+            <Route exact path={["/cars"]}>
+              <Cars user={user} />
+            </Route>
+            <Route exact path="/cars/:id">
+              <Detail />
+            </Route>
+            <Route exact path={["/about"]}>
+              <About />
+            </Route>
+            <Route>
+              <NoMatch />
+            </Route>
+          </Switch>
+        </div>
+      </Container>
 
-        <Switch>
-          <Route exact path={["/cars"]}>
-            <Cars user={user} />
-          </Route>
-          <Route exact path="/cars/:id">
-            <Detail />
-          </Route>
-          <Route exact path={["/about"]}>
-            <About />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
-        </Switch>
-
-      </div>
       <Footer />
     </Router>
   );
