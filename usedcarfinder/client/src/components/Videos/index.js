@@ -19,30 +19,35 @@ export default class Videos extends Component {
       <div className="video">
         <h1>Found your next car?</h1>
         <div className="row ">
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <div>
-              <ReactPlayer url={this.videoUrl[this.state.videoindex]} />
+              <ReactPlayer
+                url={this.videoUrl[this.state.videoindex]}
+                width="100%"
+              />
+              <button
+                className="btn btn-success Previous"
+                onClick={() =>
+                  this.setState({ videoindex: this.state.videoindex - 1 })
+                }
+              >
+                Previous
+              </button>
+              <button
+                className="btn btn-info Next"
+                onClick={() =>
+                  this.setState({ videoindex: this.state.videoindex + 1 })
+                }
+              >
+                Next
+              </button>
             </div>
           </div>
-          <div className="col-6 cars">
+          <div className="col-12 col-md-6 cars ">
             <div>
               <h2>Comments Here</h2>
             </div>
           </div>
-          <button className="btn btn-success Previous"
-            onClick={() =>
-              this.setState({ videoindex: this.state.videoindex - 1 })
-            }
-          >
-            Previous
-          </button>
-          <button className="btn btn-info Next"
-            onClick={() =>
-              this.setState({ videoindex: this.state.videoindex + 1 })
-            }
-          >
-            Next
-          </button>
         </div>
       </div>
     );
