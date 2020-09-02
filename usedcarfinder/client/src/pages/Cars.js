@@ -9,16 +9,13 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import { Redirect } from "react-router-dom";
-
-
-
-  
+import Modal from "react-modal";
 
 function Cars(props) {
   const [cars, setCar] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [userId, setUserId] = useState(null);
-
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     if (props.user) {
       setUserId(props.user.uid);
@@ -86,82 +83,89 @@ function Cars(props) {
         {!props.user ? (
           <Redirect to="/" />
         ) : (
-          <Row>
-            <Col size="md-6">
-              <form>
-                {formObject._id ? (
-                  <input type="hidden" value={formObject._id} name="id" />
-                ) : null}
-                <Input
-                  onChange={handleInputChange}
-                  name="year"
-                  placeholder="Year (required)"
-                  value={formObject.year}
-                />
-                <Input
-                  onChange={handleInputChange}
-                  name="model"
-                  placeholder="Model (required)"
-                  value={formObject.model}
-                />
-                <Input
-                  onChange={handleInputChange}
-                  name="brand"
-                  placeholder="Brand (required)"
-                  value={formObject.brand}
-                />
+          <div>
+            <button onClick={()=>setIsOpen(true)}>Click Here</button>
+            <Modal isOpen={isOpen}
+            onRequestClose={()=>setIsOpen(false)}>
+              <Row>
+                <Col size="md-6">
+                  <form>
+                    {formObject._id ? (
+                      <input type="hidden" value={formObject._id} name="id" />
+                    ) : null}
+                    <Input
+                      onChange={handleInputChange}
+                      name="year"
+                      placeholder="Year (required)"
+                      value={formObject.year}
+                    />
+                    <Input
+                      onChange={handleInputChange}
+                      name="model"
+                      placeholder="Model (required)"
+                      value={formObject.model}
+                    />
+                    <Input
+                      onChange={handleInputChange}
+                      name="brand"
+                      placeholder="Brand (required)"
+                      value={formObject.brand}
+                    />
 
-                <Input
-                  onChange={handleInputChange}
-                  name="imageURL"
-                  placeholder="imageURL (required)"
-                  value={formObject.imageURL}
-                />
+                    <Input
+                      onChange={handleInputChange}
+                      name="imageURL"
+                      placeholder="imageURL (required)"
+                      value={formObject.imageURL}
+                    />
 
-                <Input
-                  onChange={handleInputChange}
-                  name="description"
-                  placeholder="Price,Conditon,Comments (Optional)"
-                  value={formObject.description}
-                />
+                    <Input
+                      onChange={handleInputChange}
+                      name="description"
+                      placeholder="Price,Conditon,Comments (Optional)"
+                      value={formObject.description}
+                    />
 
-                <FormBtn
-                  disabled={!(formObject.year && formObject.model)}
-                  onClick={handleFormSubmit}
-                  className=""
-                >
-                  Submit Car
-                </FormBtn>
-              </form>
-            </Col>
-            <Col size="md-6 sm-12">
-              {cars.length ? (
-                <List>
-                  {cars.map((car) => (
-                    <ListItem key={car._id}>
-                      <Link to={"/cars/" + car._id}>
-                        <img
-                          src={car.imageURL}
-                          className="img-fluid"
-                          alt={car.brand}
-                          width={500}
-                          height={500}
-                        />
-                      </Link>
-                      <DeleteBtn onClick={() => deleteCar(car._id)} />
-                      <UpdateBtn onClick={() => updateCar(car)} />
-                      <strong>
-                        <br />
-                        {car.brand} {car.model}
-                      </strong>
-                    </ListItem>
-                  ))}
-                </List>
-              ) : (
-                <h3>No Results to Display</h3>
-              )}
-            </Col>
-          </Row>
+                    <FormBtn
+                      disabled={!(formObject.year && formObject.model)}
+                      onClick={handleFormSubmit}
+                      className=""
+                    >
+                      Submit Car
+                    </FormBtn>
+                  </form>
+                </Col>
+                <Col size="md-6 sm-12">
+                  {cars.length ? (
+                    <List>
+                      {cars.map((car) => (
+                        <ListItem key={car._id}>
+                          <Link to={"/cars/" + car._id}>
+                            <img
+                              src={car.imageURL}
+                              className="img-fluid"
+                              alt={car.brand}
+                              width={500}
+                              height={500}
+                            />
+                          </Link>
+                          <DeleteBtn onClick={() => deleteCar(car._id)} />
+                          <UpdateBtn onClick={() => updateCar(car)} />
+                          <strong>
+                            <br />
+                            {car.brand} {car.model}
+                          </strong>
+                        </ListItem>
+                      ))}
+                    </List>
+                  ) : (
+                    <h3>No Results to Display</h3>
+                  )}
+                </Col>
+              </Row>
+              <button onClick={()=>setIsOpen(false)}>Close</button>
+            </Modal>
+          </div>
         )}
       </Container>
     </div>
