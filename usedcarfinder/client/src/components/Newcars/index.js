@@ -15,7 +15,7 @@ export default class Services extends Component {
                         <div className="col-3">
 
                             <a href="https://www.caranddriver.com/features/g27227136/best-sedans/" target="_blank">
-                                <CardImg className="cards img-fluid"  width="100%" height="200" src="https://cdn.arstechnica.net/wp-content/uploads/2018/06/Honda-Accord-Sport-3.jpg" alt="2021 Camry" />
+                                <CardImg className="cards img-fluid"  width="100%" height="200" src="https://cdn.static-carindigo.com/tr:w-1260,h-630,ow-103.33333333333,oi-carindigo@images@carindigo_logo_white.png,ox-10,oy-10,di-no_image_SJKGShVtN.png/images/news/featured_2021-toyota-camry-features-pricing-performance-mpg-and-rivals-compared_1591291927.jpg" alt="2021 Camry" />
                                 <CardTitle>Sedans</CardTitle>
                             </a>
 
@@ -23,7 +23,7 @@ export default class Services extends Component {
                         </div>
                         <div className="col-3 cars">
                             <a href="https://www.autolist.com/guides/best-used-sports-cars-under-30000" target="_blank">
-                                <CardImg className="cards img-fluid" width="100%" height="200" src="https://www.motorcarclassics.com/galleria_images/311/311_main_l.jpg" alt="Audi R8" />
+                                <CardImg className="cards img-fluid" width="100%" height="200" src="https://images.spot.im/v1/production/a2zmtgdpr1t8dq4zpd2k" alt="Mercedes GTR" />
                                 <CardTitle >Sport Cars</CardTitle>
                             </a>
 

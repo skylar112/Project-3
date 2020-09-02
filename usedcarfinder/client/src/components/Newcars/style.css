@@ -1,5 +1,5 @@
 .card {
-  background-color: #f3f4f7;
+  background-color: #d0d4d4;
   border-color: rgb(245, 238, 238);
   margin-left: 5%;
   margin-right: 5%;
@@ -25,7 +25,7 @@
 .cards{
   transition: transform .1s;
   box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height:auto;
+  height: 200px;
  width:auto;
 }
 
