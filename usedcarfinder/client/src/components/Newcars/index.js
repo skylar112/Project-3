@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-import {
-    Card, CardImg, CardBody,
-    CardTitle, Button
-} from 'reactstrap';
+import React, { Component } from "react";
+import { Card, CardImg, CardBody, CardTitle, Button } from "reactstrap";
 import "./style.css";
 
 export default class Services extends Component {
+
     render() {
         return (
             <div className="card">
@@ -65,7 +63,8 @@ export default class Services extends Component {
                                 <CardTitle>Luxury SUV</CardTitle>
                             </a>
 
-                        </div>
+
+
 
                         <div className="col-12 col-md-3 cars">
                             <a href="https://www.caranddriver.com/features/g27242492/best-pickup-trucks/" target="_blank">
@@ -73,12 +72,10 @@ export default class Services extends Component {
                                 <CardTitle>Trucks</CardTitle>
                             </a>
 
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-           
-        );
-    }
+
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
