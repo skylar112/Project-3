@@ -128,7 +128,7 @@ export default class Services extends Component {
                   src="https://cars.usnews.com/dims4/USNEWS/0216f75/2147483647/resize/640x420%3E/format/jpeg/quality/85/?url=https%3A%2F%2Fcars.usnews.com%2Fstatic%2Fimages%2Farticle%2F201801%2F127413%2F1_-_2018_Ford_F-150_Raptor_640x420.jpg"
                   alt="Raptor"
                 />
-                <CardTitle>Used Trucks</CardTitle>
+                <CardTitle>Trucks</CardTitle>
               </a>
             </div>
           </div>
