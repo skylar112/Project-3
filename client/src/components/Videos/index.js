@@ -16,7 +16,7 @@ export default class Videos extends Component {
   ];
   render() {
     return (
-      <div className="video">
+      <div className="video" id="video">
         <h1>Found your next car?</h1>
         <div className="row ">
           <div className="col-12 col-md-6">

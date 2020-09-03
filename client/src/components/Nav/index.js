@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import firebase from "firebase";
 import "./style.css";
 
@@ -19,13 +20,13 @@ function Nav() {
         <img src=".../images/logo.png" alt=""></img>
         Home
       </a>
-      <a className="navbar-brand text-light" href="/about">
+      <Link className="navbar-brand text-light" to="/about">
         About
-      </a>
+      </Link>
 
       <h3>React Cars</h3>
 
-      <a className="navbar-brand text-light" href="/">
+      <a className="navbar-brand text-light" href="#video">
         Videos
       </a>
 
