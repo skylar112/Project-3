@@ -25,7 +25,7 @@ function Nav({ setOpen }) {
 
       <h3>React Cars</h3>
 
-      <a className="navbar-brand text-light" href="/">
+      <a className="navbar-brand text-light" href="#videos">
         Videos
       </a>
 
