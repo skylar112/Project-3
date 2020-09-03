@@ -1,6 +1,6 @@
 # Welcome to React Cars!
 
-React Cars is an application that allows you to list your car for sale online, as well as purchase cars from private owners. First you will either create and account or sign in to your account. then you will post the year, make, model, a photo, and description of the vehicle that you are trying to sell. Once you click "Submit Car", your car is posted for everyone to see! You can also shop for vehicles by searching for vehicles that are already submitted in the database by other users. Happy car shopping! 
+React Cars is an application that allows you to track your car buying journey. You can enter information about a vehicle that you have looked at and save it for future reference. You can also delete it if the car sells. This website will also provide you with video information regarding different avenues of car purchasing and what may be best for you. When you revisit the application in the future and log in you will be able to see the list of cars that you are interested in.  
 
 * Created using MERN stack: MongoDB, Express, React, & Node.js
 * CRUD functionality
