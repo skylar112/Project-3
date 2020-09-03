@@ -4,7 +4,7 @@ import "./style.css";
 export default class cards extends Component {
     render() {
         return (
-            <div>
+            <div id="usedCars">
                 <div>
                     <div>
                         <h1>Used Cars</h1>
