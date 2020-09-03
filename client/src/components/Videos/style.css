@@ -1,8 +1,7 @@
 .card {
-  background-color: #f3f4f7;
+  background-color: #F3F4F7;
   border-color: rgb(245, 238, 238);
 }
-
 .container {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(155, 15, 15);
@@ -11,48 +10,47 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
 h1 {
   transition: transform 0.1s;
   box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .cards:hover {
   -ms-transform: scale(0.3); /* IE 9 */
   -webkit-transform: scale(0.5);
   transform: scale(1.1);
 }
-
 h1 {
   border-bottom: 2px solid rgb(8, 8, 8);
-  text-align: left;
-  color: white;
-  padding: 15px;
   font-size: 30px;
   margin-bottom: px;
 }
-/* 
-.video {
-  margin-left: 70px;
-} */
-
+p{
+  float: center;
+  text-align: center;
+  margin-top: 45px;
+  font-size: 25px;
+  color: white;
+}
+section {
+  background-color: rgb(8, 8, 8);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+}
 .player-wrapper {
   position: relative;
-  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
 }
-
-.react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .Next {
   margin-left: 491px;
   margin-top: 4px;
 }
-
 .Previous {
   margin-left: 15px;
   margin-top: 4px;
+}
+h2{
+  float: center;
+  text-align: center;
+  margin-top: 25px;
+  color: white;
 }

@@ -10,7 +10,18 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import { Redirect } from "react-router-dom";
 import Modal from "react-modal";
+const customStyles = {
 
+  content : {
+    top                   : '75%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -100%)'
+  }
+
+};
 function Cars(props) {
   const [cars, setCar] = useState([]);
   const [formObject, setFormObject] = useState({});
@@ -83,10 +94,12 @@ function Cars(props) {
         {!props.user ? (
           <Redirect to="/" />
         ) : (
-          <div>
-            <button onClick={()=>setIsOpen(true)}>Click Here</button>
-            <Modal isOpen={isOpen}
-            onRequestClose={()=>setIsOpen(false)}>
+          <div className="login">
+            <h2>Car tracker click here </h2>
+            <button onClick={() => setIsOpen(true)}>Click Me</button>
+            <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)}
+            style={customStyles}
+            >
               <Row>
                 <Col size="md-6">
                   <form>
@@ -163,7 +176,7 @@ function Cars(props) {
                   )}
                 </Col>
               </Row>
-              <button onClick={()=>setIsOpen(false)}>Close</button>
+              <button onClick={() => setIsOpen(false)}>Close</button>
             </Modal>
           </div>
         )}

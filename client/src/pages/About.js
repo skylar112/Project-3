@@ -18,15 +18,24 @@ class About extends Component {
   state = { isSignedIn: false, isModalOpen: true };
   render() {
     return (
-      <div className="App" id="about">
+      <div className="App">
         <div className="Modal">
-          <Modal isOpen={this.state.isModalOpen} style={customStyles}>
-            <div class="modal-header">
+          <Modal
+            isOpen={this.state.isModalOpen}
+            style={customStyles}
+            id="about"
+          >
+            <div className="modal-header">
               <h5>How to use our page</h5>
             </div>
-            <div class="modal-body">
-              <h2>React Cars</h2>
-              <p>Welcome to React cars where you can save all your favorite cars with information when looking to buy a car.</p>
+            <div className="modal-body ">
+              <h1 className="text-dark text-center">React Cars</h1>
+              <p className="text-dark">
+                Welcome! React cars is an interactive site for the indecisive
+                car buyer, the enthusiast and everything in between. Our goal is
+                to provide resources and information for your car purchasing
+                experience.
+              </p>
             </div>
             <div class="modal-footer">
               <button

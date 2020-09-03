@@ -15,17 +15,27 @@ function Nav({ setOpen }) {
   }, []);
   return (
     <nav className="navbar navbar-light bg-dark">
+   
+   
       <a className="navbar-brand text-light" href="/">
-        <img src=".../images/logo.png" alt=""></img>
-        Home
+        <h3>React Cars</h3>
       </a>
-      <a className="navbar-brand text-light" href="#about">
+
+   
+      <a className="navbar-brand text-light" href="#newCars">
+        New Cars
+      </a>
+
+      <a className="navbar-brand text-light" href="#usedCars">
+        Used Cars
+      </a>
+      
+
+      {/* <a className="navbar-brand text-light" href="#about">
         About
-      </a>
+      </a> */}
 
-      <h3>React Cars</h3>
-
-      <a className="navbar-brand text-light" href="#videos">
+      <a className="navbar-brand text-light" href="#video">
         Videos
       </a>
 
@@ -38,7 +48,11 @@ function Nav({ setOpen }) {
           Logout
         </a>
       ) : (
-        <a className="navbar-brand  text-light" href="#login" onClick={() => setOpen(true)}>
+        <a
+          className="navbar-brand  text-light"
+          href="#login"
+          onClick={() => setOpen(true)}
+        >
           Login
         </a>
       )}
