@@ -38,7 +38,7 @@ function Nav() {
           Logout
         </a>
       ) : (
-        <a className="navbar-brand  text-light" href="/login">
+        <a className="navbar-brand  text-light" href="#login">
           Login
         </a>
       )}
