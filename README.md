@@ -16,39 +16,39 @@ The main feature of our app is the Car Tracker, with which you can enter informa
 1. Welcome Page: Displays our mission statement. What we are all about! 
 
 ![Welcome Page] 
-(https://github.com/skylar112/Project-3/images/welcome.png)
+(<https://github.com/skylar112/Project-3/images/welcome.png>)
 
 2. Login Page: First you will be prompted to sign up or login. You will have the ability to sign up with an email address or with your google account. 
 
 ![Login Page] 
-(https://github.com/skylar112/Project-3/blob/master/client/public/images/login.png)
+(<https://github.com/skylar112/Project-3/blob/master/client/public/images/login.png>)
 
 3. Home Page: Welcome to our home page. All of the apps functions will be displayed on this page. At the top, you will see a navigation bar with tabs that will move the page down to the section that you are looking for. You will see "New Cars", "Used Cars", "Videos", and "Logout"
 
 ![Home Page] 
-(https://github.com/skylar112/Project-3/blob/master/client/public/images/home.png)
+(<https://github.com/skylar112/Project-3/blob/master/client/public/images/home.png>)
 
 4. New Cars: This section of the page will be displayed. This page will show links for different classes of popular new vehicles. If you click on one of the links that you want more information about, it will direct you to a listing of the most popular cars in that class. 
 
 ![New Cars] 
-(https://github.com/skylar112/Project-3/blob/master/client/public/images/newCars.png)
+(<https://github.com/skylar112/Project-3/blob/master/client/public/images/newCars.png>)
 
 5. Used Cars: This section of the page will be displayed. This page will show links for different classes of popular used vehicles. If you click on one of the links that you want more information about, it will direct you to a listing of the most popular cars in that class.  
 
 ![Used Cars] 
-(https://github.com/skylar112/Project-3/blob/master/client/public/images/usedCars.png)
+(<https://github.com/skylar112/Project-3/blob/master/client/public/images/usedCars.png>)
 
 6. Videos: This section of the page will be displayed. This page will show various videos that you can use as tools in your car buying process. 
 
 ![Videos] 
-(https://github.com/skylar112/Project-3/blob/master/client/public/images/videos.png)
-
-7. Logout: Clicking on this link will log you off of the page and return you to the homepage
+(<https://github.com/skylar112/Project-3/blob/master/client/public/images/videos.png>)
 
 8. Car Tracker (bottom of the page): Clicking on this will open the car tracker application with which you can enter information about the wehicle that you are interested in such as the year, make, model, an image, and a brief description of your own about the car and any information that you want to remember about the vehicle. 
 
 ![Car Tracker] 
-(https://github.com/skylar112/Project-3/blob/master/client/public/images/carTracker.png)
+(<https://github.com/skylar112/Project-3/blob/master/client/public/images/carTracker.png>)
+
+7. Logout: Clicking on this link will log you off of the page and return you to the homepage
 
 ## Deployment
 
