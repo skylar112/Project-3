@@ -55,7 +55,7 @@ class Login extends Component {
         ) : (
           <div className="Modal">
             <Modal
-              isOpen={this.state.isModalOpen}
+              isOpen={this.props.open || this.state.isModalOpen}
               // onAfterOpen={afterOpenModal}
               // onRequestClose={closeModal}
               style={customStyles}
@@ -72,7 +72,10 @@ class Login extends Component {
               <div className="modal-footer">
                 <button
                   className="btn btn-primary"
-                  onClick={() => this.setState({ isModalOpen: false })}
+                  onClick={() => {
+                    this.setState({ isModalOpen: false });
+                    this.props.setOpen(false);
+                  }}
                 >
                   CLOSE
                 </button>

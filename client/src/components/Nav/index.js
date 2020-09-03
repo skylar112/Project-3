@@ -2,7 +2,7 @@ import React from "react";
 import firebase from "firebase";
 import "./style.css";
 
-function Nav() {
+function Nav({ setOpen }) {
   const [isSignedIn, setSignInStatus] = React.useState(false);
   React.useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -38,7 +38,7 @@ function Nav() {
           Logout
         </a>
       ) : (
-        <a className="navbar-brand  text-light" href="#login">
+        <a className="navbar-brand  text-light" href="#login" onClick={() => setOpen(true)}>
           Login
         </a>
       )}

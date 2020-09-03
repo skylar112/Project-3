@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Cars from "./pages/Cars";
+import LoginContextProvider, { LoginContext } from './utils/LoginContext';
 import Login from "./pages/Login";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
@@ -17,13 +18,20 @@ import { Container } from "reactstrap";
 function App() {
   let [user, setUser] = useState(false);
   return (
+    <LoginContextProvider>
     <Router>
       {console.log("app", user)}
 
-      <Nav />
-      <Route exact path={["/", "/login/"]}>
-        <Login setUser={setUser} />
-      </Route>
+      <LoginContext.Consumer>
+        {({ open, setOpen }) => (
+           <>
+           <Nav setOpen={setOpen} />
+           <Route exact path={["/", "/login/"]}>
+             <Login open={open} setUser={setUser} setOpen={setOpen} />
+           </Route>
+         </>
+        )}
+      </LoginContext.Consumer>
       <Jumbotron />
       <Container>
         <div className="col-12">
@@ -58,6 +66,7 @@ function App() {
 
       <Footer />
     </Router>
+    </LoginContextProvider>
   );
 }
 
