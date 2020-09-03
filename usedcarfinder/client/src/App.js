@@ -32,12 +32,13 @@ function App() {
           </Switch>
 
           <Switch>
-            <Cards />
+            <Videos />
           </Switch>
 
           <Switch>
-            <Videos />
+            <Cards />
           </Switch>
+          
 
           <Switch>
             <Route exact path={["/cars"]}>

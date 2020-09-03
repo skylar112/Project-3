@@ -16,40 +16,49 @@ export default class Videos extends Component {
   ];
   render() {
     return (
-      <div className="video">
-        <h1>Found your next car?</h1>
-        <div className="row ">
-          <div className="col-12 col-md-6">
-            <div>
-              <ReactPlayer
-                url={this.videoUrl[this.state.videoindex]}
-                width="100%"
-              />
-              <button
-                className="btn btn-success Previous"
-                onClick={() =>
-                  this.setState({ videoindex: this.state.videoindex - 1 })
-                }
-              >
-                Previous
+      <section>
+        <div>
+          <div >
+            <h1>Found your next car?</h1>
+            <div className="row ">
+              <div className="col-12 col-md-6">
+                <div>
+                  <ReactPlayer
+                    url={this.videoUrl[this.state.videoindex]}
+                    width="100%"
+                  />
+                  <button
+                    className="btn btn-success Previous"
+                    onClick={() =>
+                      this.setState({ videoindex: this.state.videoindex - 1 })
+                    }
+                  >
+                    Previous
               </button>
-              <button
-                className="btn btn-info Next"
-                onClick={() =>
-                  this.setState({ videoindex: this.state.videoindex + 1 })
-                }
-              >
-                Next
+                  <button
+                    className="btn btn-info Next"
+                    onClick={() =>
+                      this.setState({ videoindex: this.state.videoindex + 1 })
+                    }
+                  >
+                    Next
               </button>
-            </div>
-          </div>
-          <div className="col-12 col-md-6 cars ">
-            <div>
-              <h2>Comments Here</h2>
+                </div>
+              </div>
+              <div className="col-12 col-md-6">
+                <div>
+                  <h2>"Using React Cars  made me feel empowered because I was able to understand whether I had a good deal before I walked into the dealership."
+                
+              </h2>
+
+              <p>- William Gomez</p> 
+              <p>Teaneck, New Jersey</p> 
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
