@@ -64,6 +64,13 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Future Development
+
+Incorporate used and new car search function into site, API cost
+Incorporate in a function to allow dealers and private sellers to be able to list on our site
+Incorporate ads to generate revenue
+Firebase to include more login options: Github, Facebook etc.
+Incorporate YouTube API
 
 
 
