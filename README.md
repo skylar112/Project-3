@@ -15,7 +15,7 @@ The main feature of our app is the Car Tracker, with which you can enter informa
 
 1. Welcome Page: Displays our mission statement. What we are all about! 
 
-![Welcome Page](
+![Welcome Page](https://github.com/skylar112/Project-3/blob/master/client/public/images/home.png)
 
 2. Login Page: First you will be prompted to sign up or login. You will have the ability to sign up with an email address or with your google account. 
 
