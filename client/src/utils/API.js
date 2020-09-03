@@ -14,6 +14,11 @@ export default {
     });
   },
 
+searchCar: function(searchValue){
+return axios.get("/api/cars/search?search=" + searchValue);
+},
+
+
   deleteCar: function (id) {
     return axios.delete("/api/cars/" + id);
   },
