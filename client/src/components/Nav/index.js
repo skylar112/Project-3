@@ -19,7 +19,7 @@ function Nav({ setOpen }) {
         <img src=".../images/logo.png" alt=""></img>
         Home
       </a>
-      <a className="navbar-brand text-light" href="/about">
+      <a className="navbar-brand text-light" href="#about">
         About
       </a>
 

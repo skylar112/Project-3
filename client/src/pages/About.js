@@ -18,7 +18,7 @@ class About extends Component {
   state = { isSignedIn: false, isModalOpen: true };
   render() {
     return (
-      <div className="App">
+      <div className="App" id="about">
         <div className="Modal">
           <Modal isOpen={this.state.isModalOpen} style={customStyles}>
             <div class="modal-header">

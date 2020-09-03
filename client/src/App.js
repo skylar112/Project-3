@@ -54,9 +54,7 @@ function App() {
             <Route exact path="/cars/:id">
               <Detail />
             </Route>
-            <Route exact path={["/about"]}>
-              <About />
-            </Route>
+            <About />
             <Route>
               <NoMatch />
             </Route>
