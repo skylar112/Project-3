@@ -11,13 +11,19 @@ React Cars is an application that allows you to track your car buying journey. Y
 
 ## Pages
 
-1. Login Page: First you will be prompted to sign up or login. 
+1. Welcome Page: Displays our mission statement. What we are all about! 
 
-2. Home Page: This is the home page. From this page, you can enter a car into the database and view "mini-postings" of the cars that you have posted for sale. You can also click on the "mini-postings" to view the full description of the vehicle. 
+2. Login Page: First you will be prompted to sign up or login. You will have the ability to sign up with an email address or with your google account. 
 
-3. Details Page: This page can be reached by clicking on your "mini-postings". This page will show all of the information about the vehicle that you have posted including the year, make, model, and description that you typed in when posting the car. 
+3. Home Page: Welcome to our home page. All of the apps functions will be displayed on this page. At the top, you will see a navigation bar with tabs that will move the page down to the section that you are looking for. You will see "New Cars", "Used Cars", "Videos", and "Logout"
 
-4. Search Page: This page can be used to search for cars that you might be interested in buying! 
+4. New Cars: This section of the page will be displayed. This page will show links for different classes of popular new vehicles. If you click on one of the links that you want more information about, it will direct you to a listing of the most popular cars in that class. 
+
+5. Used Cars: This section of the page will be displayed. This page will show links for different classes of popular used vehicles. If you click on one of the links that you want more information about, it will direct you to a listing of the most popular cars in that class.  
+
+6. Videos: This section of the page will be displayed. This page will show various videos that you can use as tools in your car buying process. 
+
+7. Logout: Clicking on this link will log you off of the page and return you to the homepage. 
 
 ## Deployment
 
