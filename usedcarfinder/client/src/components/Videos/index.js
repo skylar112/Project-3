@@ -6,13 +6,14 @@ import "./style.css";
 export default class Videos extends Component {
   state = { videoindex: 0 };
   videoUrl = [
+    "https://www.youtube.com/watch?v=xvtVSGpKdto",
     "https://www.youtube.com/watch?v=BtY9Nmm2z0U",
     "https://www.youtube.com/watch?v=BHgwd6YKWlU",
     "https://www.youtube.com/watch?v=RUx6FfhPLw4",
     "https://www.youtube.com/watch?v=zgT_4khybEw",
     "https://www.youtube.com/watch?v=vyaNeKZjHcI",
     "https://www.youtube.com/watch?v=drbhNLvYxGQ",
-    "https://www.youtube.com/watch?v=xvtVSGpKdto",
+    "https://www.youtube.com/watch?v=QG5laUSuyCA",
   ];
   render() {
     return (

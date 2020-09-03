@@ -4,13 +4,13 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-
   background: linear-gradient(-45deg, #e0400f, #641d38, #add3e0, #0a8564);
 	background-size: 400% 400%;
 	animation: gradient 9s ease infinite;
 
 }
+
+
 
 @keyframes gradient {
   0% {
@@ -60,7 +60,7 @@ body {
 
 h5 {
   font-family: "Damion", cursive;
-  font-size: 50px;
+  font-size: 60px;
   color: white;
 }
 
@@ -78,9 +78,25 @@ h5 {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .modal-body {
-  font-size: 24px;
+  font-size: 45px;
   text-align: center;
-}
+  background-color: black;
+  
+ }
+
+ 
+ h7{
+   color: red;
+   font-size: 45px;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+
+ h8{
+   color: white;
+   font-size:35px;
+   text-align: center;
+ }
+
 
 @keyframes App-logo-spin {
   from {

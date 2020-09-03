@@ -25,8 +25,10 @@ class About extends Component {
               <h5>How to use our page</h5>
             </div>
             <div class="modal-body">
-              <h2>React Cars</h2>
-              <p>Welcome to React cars where you can save all your favorite cars with information when looking to buy a car.</p>
+              <h7>React Cars</h7>
+              <br></br>
+              <h8>Welcome to React Cars, buying a car can be a difficult decision. Our goal is to help you decide how to buy a car. Finance or Lease? New or Used? How do I negotiate?
+Please enjoy our interactive website.</h8>
             </div>
             <div class="modal-footer">
               <button
