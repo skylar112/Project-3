@@ -20,6 +20,7 @@ React Cars is an application that allows you to list your car for sale online, a
 4. Search Page: This page can be used to search for cars that you might be interested in buying! 
 
 ## Deployment
+https://fast-basin-73426.herokuapp.com/cars
 
 ### `npm install`
 
